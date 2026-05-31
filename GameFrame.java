@@ -77,12 +77,12 @@ public class GameFrame extends JFrame {
                 .replace("ó", "o") // por si hay acentos
                 .replace("á", "a");
 
-        String ruta = "resources/images" + nombreArchivo + ".jpg";
+        String ruta = "/images/" + nombreArchivo + ".jpg";
 
         ImageIcon icon = null;
         try {
             icon = new ImageIcon(getClass().getResource(ruta));
-            Image image = icon.getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH);
+            Image image = icon.getImage().getScaledInstance(225, 225, Image.SCALE_SMOOTH);
             icon = new ImageIcon(image);
         } catch (Exception e) {
             System.err.println("No se pudo cargar la imagen: " + ruta);
